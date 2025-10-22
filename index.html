@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Daftar Mahasiswa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎓 Daftar Mahasiswa</h1>
+        
+        <div class="form-card">
+            <h2 id="form-title">Tambah Mahasiswa Baru</h2>
+            <form id="mahasiswa-form">
+                <input type="hidden" id="mahasiswa-id">
+                <div class="form-group">
+                    <label for="nim">NIM</label>
+                    <input type="text" id="nim" required>
+                </div>
+                <div class="form-group">
+                    <label for="nama">Nama</label>
+                    <input type="text" id="nama" required>
+                </div>
+                <div class="form-group">
+                    <label for="jurusan">Jurusan</label>
+                    <input type="text" id="jurusan" required>
+                </div>
+                <button type="submit" id="submit-button">Tambah</button>
+                <button type="button" id="cancel-button" class="hidden">Batal</button>
+            </form>
+        </div>
+
+        <h2>Data Mahasiswa</h2>
+        
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Cari berdasarkan NIM, nama, atau jurusan...">
+        </div>
+        
+        <table id="mahasiswa-table">
+            <thead>
+                <tr>
+                    <th>NIM</th>
+                    <th>Nama</th>
+                    <th>Jurusan</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="mahasiswa-list">
+                </tbody>
+        </table>
+
+        <div id="pagination-container" class="pagination-container">
+            </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
